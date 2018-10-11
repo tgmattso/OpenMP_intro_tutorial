@@ -1,13 +1,13 @@
-# for Intel compiler on windows
+# for g++ compiler on Apple OS-X
 # copy to make.def
-CC          = icl
+CC          = g++
 CLINKER     = $(CC)
-OPTFLAGS    = /Qopenmp
-LIBS        =
-PRE         =
+OPTFLAGS    = -fopenmp -DAPPLE
+LIBS        = -lm
+PRE         = ./
 
-CFLAGS	  = $(OPTFLAGS) 
+CFLAGS	  = $(OPTFLAGS)
 
-OBJ=obj
-EXE=.exe
-RM=del
+OBJ=o
+EXE=
+RM=rm
