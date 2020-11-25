@@ -38,12 +38,12 @@ struct node* init_list(struct node* p) {
     struct node* head = NULL;
     struct node* temp = NULL;
     
-    head = (node*)malloc(sizeof(struct node));
+    head = (struct node*)malloc(sizeof(struct node));
     p = head;
     p->data = FS;
     p->fibdata = 0;
     for (i=0; i< N; i++) {
-       temp  =  (node*)malloc(sizeof(struct node));
+       temp  =  (struct node*)malloc(sizeof(struct node));
        p->next = temp;
        p = temp;
        p->data = FS + i + 1;
