@@ -1,6 +1,9 @@
 # for intel compiler on linux (most exercises work with icc as well)
 # copy to make.def
-CC         = icpc
+#
+# Make sure to execute `. /opt/intel/oneapi/setvars.sh` in the terminal
+# before executing `make test`
+CC         = icx
 CPP         = $(CC)
 OPTFLAGS   = -openmp
 
